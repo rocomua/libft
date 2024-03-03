@@ -6,7 +6,7 @@
 /*   By: rkogut <ro@ro.com.ua>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 15:53:55 by rkogut            #+#    #+#             */
-/*   Updated: 2024/03/03 16:47:54 by rkogut           ###   ########.fr       */
+/*   Updated: 2024/03/03 21:36:29 by rkogut           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void*	ft_memmove(void* dest, const void* src, size_t n)
 	return dest;
 }
 
-int main() {
+/* int main() {
 	char source[] = "Hello, world!";
 	char destination[20];
 
@@ -44,4 +44,4 @@ int main() {
 	printf("Source: %s\n", source);
 	printf("Destination: %s\n", destination);
 	return (0);
-}
+} */
