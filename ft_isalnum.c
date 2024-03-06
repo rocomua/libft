@@ -1,44 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 18:58:24 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 10:54:35 by rkogut@stud      ###   ########.fr       */
+/*   Created: 2024/03/05 12:25:43 by rkogut@stud       #+#    #+#             */
+/*   Updated: 2024/03/05 12:35:37 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_isalnum(int c)
 {
-	unsigned char	*ptr;
-	unsigned char	value;
-
-	ptr = (unsigned char *)s;
-	value = (unsigned char)c;
-	while (n-- > 0)
-	{
-		*ptr++ = value;
-	}
-	return (s);
+	if ((c >= 0 && c <= 9) || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (c);
+	return (0);
 }
 
 /*#include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
 int main() {
-	char str[20] = "Hello, World!";
+    char ch = '!';
 
-	// Testing ft_memset
-	printf("Before ft_memset: %s\n", str);
+    if (isalnum(ch)) {
+        printf("%c is alphanumeric.\n", ch);
+    } else {
+        printf("%c is not alphanumeric.\n", ch);
+    }
+	if (ft_isalnum(ch)) {
+		printf("%c is alphanumeric.\n", ch);
+	} else {
+		printf("%c is not alphanumeric.\n", ch);
+	}
 
-	ft_memset(str, 'A', 5);
-
-	printf("After ft_memset: %s\n", str);
-
-	return 0;
-}
-*/
+    return 0;
+}*/

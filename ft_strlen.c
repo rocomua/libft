@@ -1,44 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 18:58:24 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 10:54:35 by rkogut@stud      ###   ########.fr       */
+/*   Created: 2024/02/27 14:10:23 by rkogut@stud       #+#    #+#             */
+/*   Updated: 2024/02/27 15:45:03 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_strlen(char *str)
 {
-	unsigned char	*ptr;
-	unsigned char	value;
+	int	i;
 
-	ptr = (unsigned char *)s;
-	value = (unsigned char)c;
-	while (n-- > 0)
+	i = 0;
+	while (*str != '\0')
 	{
-		*ptr++ = value;
+		i++;
+		str++;
 	}
-	return (s);
+	return (i);
 }
 
 /*#include <stdio.h>
-#include <string.h>
 
 int main() {
-	char str[20] = "Hello, World!";
+    char str1[] = "Hello, world!";
+    char str2[] = "";
+    char str3[] = "12345";
 
-	// Testing ft_memset
-	printf("Before ft_memset: %s\n", str);
+    printf("Length of '%s': %d\n", str1, ft_strlen(str1));
+    printf("Length of '%s': %d\n", str2, ft_strlen(str2));
+    printf("Length of '%s': %d\n", str3, ft_strlen(str3));
 
-	ft_memset(str, 'A', 5);
-
-	printf("After ft_memset: %s\n", str);
-
-	return 0;
-}
-*/
+    return 0;
+}*/

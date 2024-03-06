@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 18:58:24 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 10:54:35 by rkogut@stud      ###   ########.fr       */
+/*   Created: 2024/02/29 11:55:36 by rkogut@stud       #+#    #+#             */
+/*   Updated: 2024/02/29 12:06:23 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_toupper(int c)
 {
-	unsigned char	*ptr;
-	unsigned char	value;
-
-	ptr = (unsigned char *)s;
-	value = (unsigned char)c;
-	while (n-- > 0)
-	{
-		*ptr++ = value;
-	}
-	return (s);
+	if (c >= 65 && c <= 90)
+		return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (0);
 }
 
-/*#include <stdio.h>
-#include <string.h>
+/*
+#include <stdio.h>
+#include <ctype.h>
 
 int main() {
-	char str[20] = "Hello, World!";
+    char lowercase = 'z';
+    char uppercase = toupper(lowercase);
 
-	// Testing ft_memset
-	printf("Before ft_memset: %s\n", str);
+    printf("Uppercase version of %c is %c\n", lowercase, uppercase);
 
-	ft_memset(str, 'A', 5);
+    char lc = 'z';
+    char uc = ft_toupper(lowercase);
 
-	printf("After ft_memset: %s\n", str);
+    printf("FT_Uppercase version of %c is %c\n", lc, uc);
 
-	return 0;
+
+    return 0;
 }
 */

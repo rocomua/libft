@@ -3,40 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkogut <ro@ro.com.ua>                      +#+  +:+       +#+        */
+/*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 15:53:55 by rkogut            #+#    #+#             */
-/*   Updated: 2024/03/03 21:36:29 by rkogut           ###   ########.fr       */
+/*   Created: 2024/03/04 13:05:08 by rkogut@stud       #+#    #+#             */
+/*   Updated: 2024/03/04 13:07:22 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void*	ft_memmove(void* dest, const void* src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char* d = (char*)dest;
-	const char* s = (const char*)src;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	if (s < d && s + n > d)
-	{
-		size_t i = n;
-		while (i > 0) {
-			d[i - 1] = s[i - 1];
-			i--;
-		}
-	}
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (!dst && !src)
+		return (dst);
+	if (src < dst)
+		while (len--)
+			d[len] = s[len];
 	else
-	{
-		size_t i = 0;
-		while (i < n) {
-			d[i] = s[i];
-			i++;
-		}
-	}
-	return dest;
+		while (len--)
+			*d++ = *s++;
+	return (dst);
 }
-
-/* int main() {
+/*
+ int main() {
 	char source[] = "Hello, world!";
 	char destination[20];
 

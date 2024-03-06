@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 18:58:24 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 10:54:35 by rkogut@stud      ###   ########.fr       */
+/*   Created: 2024/02/28 15:22:55 by rkogut@stud       #+#    #+#             */
+/*   Updated: 2024/03/06 13:47:28 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	unsigned char	*ptr;
-	unsigned char	value;
+	int	i;
 
-	ptr = (unsigned char *)s;
-	value = (unsigned char)c;
-	while (n-- > 0)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		*ptr++ = value;
+		dst[i] = src[i];
+		i++;
 	}
-	return (s);
+	dst[i] = '\0';
+	return (dst);
 }
 
 /*#include <stdio.h>
-#include <string.h>
 
 int main() {
-	char str[20] = "Hello, World!";
+    char src[] = "Hello, world!";
+    char dst[20]; // Make sure dst has enough space to hold the copied string
 
-	// Testing ft_memset
-	printf("Before ft_memset: %s\n", str);
+    unsigned int copied_len = strlcpy(dst, src, sizeof(dst));
 
-	ft_memset(str, 'A', 5);
+    printf("Copied string: %s\n", dst);
+    printf("Length of copied string: %zu\n", copied_len);
 
-	printf("After ft_memset: %s\n", str);
-
-	return 0;
-}
-*/
+    return 0;
+}*/
