@@ -6,7 +6,7 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 13:02:59 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/02/29 15:45:35 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/03/07 16:28:54 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,20 @@ char	*ft_strchr(const char *s, int c)
 /*
 #include <stdio.h>
 
-int main() {
-    const char *str = "Hello, World!";
-    const char *ptr;
+int	main(void)
+{
+	const char	*str = "Hello, World!";
+	const char	*ptr;
 
-    ptr = strchr(str, 'o');
-    if (ptr != NULL) {
-        printf("Found character 'o' at position: %ld\n", ptr - str);
-    } else {
-        printf("Character 'o' not found.\n");
-    }
+	ptr = strchr(str, 'o');
+	if (ptr != NULL)
+	{
+		printf("Found character 'o' at position: %ld\n", ptr - str);
+	}
+	else
+	{
+		printf("Character 'o' not found.\n");
+	}
 
-    return 0;
-}
-*/
+	return (0);
+}*/
