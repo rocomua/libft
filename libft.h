@@ -6,7 +6,7 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:20:01 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 13:58:22 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/03/07 19:18:16 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ char				**ft_split(char const *s, char c);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(f)(void *),
-							void (*del)(void *));
+						void (*del)(void *));
 
 #endif

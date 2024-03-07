@@ -6,13 +6,13 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:59:18 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/07 16:51:29 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/03/07 19:18:48 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
 	char	*ptr;
@@ -40,7 +40,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
@@ -67,3 +67,4 @@ int main(void)
 
     return (0);
 }
+*/
