@@ -6,11 +6,41 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:06:07 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/05 18:37:31 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/04/10 15:55:09 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	b;
+	size_t	l;
+	char	*result;
+
+	b = 0;
+	l = 0;
+	if (*little == '\0')
+		return ((char *)big);
+	while (b < len && *(big + b) != '\0')
+	{
+		if (*(big + b) == *(little + l))
+			result = ((char *)big + b);
+		while (*(big + b) == *(little + l) && b < len)
+		{
+			if (*(little + l + 1) == '\0')
+				return (result);
+			b++;
+			l++;
+		}
+		b -= l;
+		l = 0;
+		b++;
+	}
+	return (NULL);
+}
+
+/*#include <stddef.h>
 
 char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
@@ -35,8 +65,7 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 		i++;
 	}
 	return (NULL);
-}
-
+}*/
 /*#include <stdio.h>
 
 int main() {

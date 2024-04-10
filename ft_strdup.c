@@ -10,12 +10,27 @@
 /*																			*/
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
+{
+	char	*ptr;
+	int		len;
+
+	len = ft_strlen(s);
+	ptr = ft_calloc(len + 1, sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	if (ptr)
+		ft_memcpy(ptr, s, len + 1);
+	return (ptr);
+}
+
+/*#include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
 #include <stdio.h>
-#include "libft.h"
-
+#include "libft.h"*/
 /*char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;
@@ -29,7 +44,7 @@
 	dest[i] = '\0';
 	return (dest);
 }*/
-
+/*
 char	*ft_strdup(const char *str)
 {
 	char	*duplicate;
@@ -44,7 +59,7 @@ char	*ft_strdup(const char *str)
 	ft_strcpy(duplicate, str);
 	return (duplicate);
 }
-
+*/
 /*int main() {
 	const char *original = "Hello, world!";
 	char *duplicate = ft_strdup(original);

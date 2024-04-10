@@ -6,12 +6,49 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 10:55:12 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/03/06 11:54:40 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/04/10 16:06:34 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
+char	*ft_toobigstart(void)
+{
+	char	*ptr;
+
+	ptr = ft_calloc(1, sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	return (ptr);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	unsigned int	i;
+	char			*ptr;
+	unsigned int	strlen;
+
+	if (s == NULL)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_toobigstart());
+	strlen = ft_strlen((s + start));
+	if (strlen < len)
+		len = strlen;
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
+	i = start;
+	while (i < len + start)
+	{
+		*(ptr + i - start) = *(s + i);
+		i++;
+	}
+	*(ptr + i - start) = '\0';
+	return (ptr);
+}
+
+/*
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
@@ -39,7 +76,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
-
+*/
 /*#include <stdio.h>
 #include <stdlib.h>
 
