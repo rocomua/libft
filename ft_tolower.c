@@ -6,19 +6,26 @@
 /*   By: rkogut@student.42warsaw.pl <rkogut>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 12:08:22 by rkogut@stud       #+#    #+#             */
-/*   Updated: 2024/02/29 14:56:27 by rkogut@stud      ###   ########.fr       */
+/*   Updated: 2024/04/10 11:47:19 by rkogut@stud      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c);
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
 
+/*int	ft_toupper(int c)
+{
+	if (c > 96 && c < 123)
+		c += 32;
+	return (c);
+}
+*/
 /*#include <stdio.h>
 #include <ctype.h>
 
