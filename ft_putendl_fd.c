@@ -6,7 +6,7 @@
 /*   By: rkogut <ro@ro.com.ua>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:00:14 by rkogut            #+#    #+#             */
-/*   Updated: 2024/04/10 20:55:03 by rkogut           ###   ########.fr       */
+/*   Updated: 2024/04/10 22:30:03 by rkogut           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void
 	ft_putendl_fd(char *s, int fd)
 {
-	const char	nl;
+	const char	nl = '\n';
 
-	nl = '\n'
 	write(fd, s, ft_strlen(s));
 	write(fd, &nl, 1);
 }
