@@ -6,11 +6,11 @@
 /*   By: rkogut <ro@ro.com.ua>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:49:59 by rkogut            #+#    #+#             */
-/*   Updated: 2024/04/10 22:23:43 by rkogut           ###   ########.fr       */
+/*   Updated: 2024/04/11 08:51:35 by rkogut           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
 static int	base_check(char const *base)
 {
@@ -77,4 +77,4 @@ void	ft_putnbr_fd(int n, int fd)
 		write(1, "-9223372036854775808", 20);
 	else
 		putnbr_base_fd(n, base, fd);
-}
+ }*/
